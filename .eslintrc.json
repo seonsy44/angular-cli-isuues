@@ -52,6 +52,7 @@
     ], // prettier의 printWidth 옵션 대신 사용
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["off"],
-    "react/prop-types": ["off"]
+    "react/prop-types": ["off"],
+    "react/jsx-no-useless-fragment": ["off"]
   }
 }
