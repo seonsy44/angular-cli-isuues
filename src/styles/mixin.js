@@ -43,9 +43,9 @@ export const positionCenter = (type = 'absolute') => {
 export const responsive = device => {
   switch (device) {
     case 'phone':
-      return css`screen and (max-width: 540px)`;
+      return `@media screen and (max-width: 600px)`;
     case 'desktop':
-      return css`screen and (min-width: 541px)`;
+      return `@media screen and (min-width: 601px)`;
     default:
       return '';
   }
