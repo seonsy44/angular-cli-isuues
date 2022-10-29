@@ -8,6 +8,8 @@ function Routes({ children: routes }) {
     setCurrentPath(window.location.pathname);
   };
 
+  if (!Array.isArray(routes)) return <>{routes}</>;
+
   return routes.find(route => route.props.path === currentPath).props.element;
 }
 
