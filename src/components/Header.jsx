@@ -17,9 +17,8 @@ function Header() {
 export default Header;
 
 const Container = styled.header`
-  width: calc(100% + 60px);
-  height: 120px;
-  transform: translateX(-30px);
+  width: 100vw;
+  height: 110px;
   ${flexBox()};
   background-color: ${({ theme }) => theme.backgroundColor};
   border-bottom: solid 1px ${({ theme }) => theme.borderColor};
@@ -27,9 +26,8 @@ const Container = styled.header`
   font-weight: 500;
 
   ${responsive('phone')} {
-    width: 100%;
-    height: 100px;
-    transform: translateX(0px);
+    height: 95px;
+    font-size: 26px;
   }
 `;
 
