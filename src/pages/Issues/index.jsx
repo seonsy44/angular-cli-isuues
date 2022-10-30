@@ -32,7 +32,7 @@ function Issues() {
   return (
     <Container ref={target}>
       {issues.list.map((issue, idx) => (
-        <Issue key={issue.id} issue={issue} idx={idx} />
+        <Issue key={issue.number} issue={issue} idx={idx} />
       ))}
     </Container>
   );

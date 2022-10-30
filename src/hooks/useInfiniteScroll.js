@@ -9,7 +9,7 @@ const useInfiniteScroll = ({
   pageSize,
   endPoint = 1,
 }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const observer = useMemo(
     () =>
@@ -37,7 +37,7 @@ const useInfiniteScroll = ({
       return;
     }
 
-    if (pageSize * (count + 1) <= targetArray.length) {
+    if (pageSize * count <= targetArray.length) {
       observer.observe(target.current.children[target.current.children.length - endPoint]);
     }
 
