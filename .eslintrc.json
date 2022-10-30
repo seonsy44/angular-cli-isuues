@@ -54,6 +54,10 @@
     "react/jsx-filename-extension": ["off"],
     "react/prop-types": ["off"],
     "react/jsx-no-useless-fragment": ["off"],
-    "no-unused-vars": ["off"]
+    "no-unused-vars": ["off"],
+    "jsx-a11y/control-has-associated-label": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    " jsx-a11y/click-events-have-key-events ": ["off"],
+    "react/jsx-no-constructed-context-values": ["off"]
   }
 }
