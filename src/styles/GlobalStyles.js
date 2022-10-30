@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+// import reset from 'styled-reset';
 import { flexBox } from './mixin';
 
 const GlobalStyles = createGlobalStyle` 
-  ${reset}
 
   body {
     ${flexBox('column', 'center', 'center')};
     overflow-x: hidden;
+    margin: 0;
   }
 
   a{

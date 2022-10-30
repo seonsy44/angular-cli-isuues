@@ -22,12 +22,12 @@ const Container = styled.header`
   ${flexBox()};
   background-color: ${({ theme }) => theme.backgroundColor};
   border-bottom: solid 1px ${({ theme }) => theme.borderColor};
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 500;
 
   ${responsive('phone')} {
     height: 95px;
-    font-size: 26px;
+    font-size: 15px;
   }
 `;
 

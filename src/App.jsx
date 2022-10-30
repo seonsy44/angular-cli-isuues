@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { flexBox, responsive } from './styles/mixin';
 import Header from './components/Header';
 import Issues from './pages/Issues';
+import IssueDetail from './pages/IssueDetail';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Issues />} />
+          <Route path="/:id" element={<IssueDetail />} />
         </Routes>
       </Container>
     </>

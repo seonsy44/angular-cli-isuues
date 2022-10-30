@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useContext, useEffect, useRef } from 'react';
 import { IssuesContext } from '../../contexts/issuesContext';
-import useAxios from '../../hooks/useAios';
+import useAxios from '../../hooks/useAxios';
 import { responsive } from '../../styles/mixin';
 import issueAPI from '../../utils/api';
 import Issue from './Issue';
