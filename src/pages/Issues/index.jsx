@@ -24,7 +24,10 @@ function Issues() {
       { state: 'open', sort: 'comments', per_page: 20, page: count },
       {
         // setLoading(false);
-        onSuccess: data => issues.add(data),
+        onSuccess: data => {
+          if (count === 1) issues.set(data);
+          else issues.add(data);
+        },
       }
     );
   }, [count]);
