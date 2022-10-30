@@ -11,7 +11,7 @@ function useAxios(api) {
     }
 
     if (onError) {
-      await onError();
+      await onError({ status, errorMsg: data.message });
     }
   };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import IssueDetailHeader from './IssueDetailHeader';
 import Markdown from '../../components/Markdown';
 import LoadingSpinner from '../../components/LoadingSpinner';
@@ -14,6 +14,7 @@ function Issues() {
   const [issue, setIssue] = useState({});
   const { id } = useParams();
   const getIssue = useAxios(issueAPI.getIssue);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);
@@ -25,6 +26,9 @@ function Issues() {
         onSuccess: ({ user, number, title, created_at: createdAt, comments, body }) => {
           setIssue({ user, number, title, createdAt: parseDate(createdAt), comments, body });
           setIsLoading(false);
+        },
+        onError: state => {
+          navigate('/error', { state });
         },
       }
     );

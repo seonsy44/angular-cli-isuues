@@ -42,7 +42,6 @@ function Issues() {
 
       {loading && (
         <LoadingContainer>
-          {' '}
           <LoadingSpinner />
         </LoadingContainer>
       )}

@@ -4,6 +4,7 @@ import { flexBox, responsive } from './styles/mixin';
 import Header from './components/Header';
 import Issues from './pages/Issues';
 import IssueDetail from './pages/IssueDetail';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Issues />} />
           <Route path="/:id" element={<IssueDetail />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
       </Container>
     </>
