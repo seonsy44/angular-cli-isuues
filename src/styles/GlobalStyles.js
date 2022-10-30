@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${flexBox('column', 'center', 'center')};
+    overflow-x: hidden;
   }
 
   a{
