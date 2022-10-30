@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { flexBox, responsive } from '../styles/mixin';
-import useRouter from '../hooks/useRouter';
 
 function Header() {
-  const router = useRouter();
+  const navigate = useNavigate();
 
-  const handleClick = () => router.push('/');
+  const handleClick = () => navigate('/');
 
   return (
     <Container>
