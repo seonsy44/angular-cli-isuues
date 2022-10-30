@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useContext, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IssuesContext } from '../../contexts/issuesContext';
 import useAxios from '../../hooks/useAxios';
 import { flexBox, responsive } from '../../styles/mixin';
@@ -13,6 +14,7 @@ function Issues() {
   const target = useRef(null);
   const issues = useContext(IssuesContext);
   const getIssues = useAxios(issueAPI.getIssues);
+  const navigate = useNavigate();
   const { count } = useInfiniteScroll({
     target,
     targetArray: issues.list,
@@ -29,6 +31,9 @@ function Issues() {
           if (count === 1) issues.set(data);
           else issues.add(data);
           setLoading(false);
+        },
+        onError: state => {
+          navigate('/error', { state });
         },
       }
     );
